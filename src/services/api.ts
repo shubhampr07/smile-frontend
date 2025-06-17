@@ -10,7 +10,7 @@ import {
 } from '../types/leaderboard'
 
 // Create axios instance with base URL
-const API_URL = (import.meta as any).env.VITE_API_URL || 'http://localhost:5000/api'
+const API_URL = (import.meta as any).env.VITE_API_URL || 'https://smile-backend-qxgc.onrender.com/api'
 
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: API_URL,
