@@ -21,7 +21,7 @@ const userSettingsSchema = z.object({
   upiId: z.string().max(50, 'UPI ID cannot exceed 50 characters').optional(),
 })
 
-type UserSettingsFormData = z.infer<typeof userSettingsSchema>
+// type UserSettingsFormData = z.infer<typeof userSettingsSchema>
 
 const UserSettingsPage = () => {
   const navigate = useNavigate()
@@ -39,7 +39,7 @@ const UserSettingsPage = () => {
   const [showPasswordFields, setShowPasswordFields] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const { register, handleSubmit, formState: { errors }, reset, setValue, watch, setError, clearErrors } = useForm<any>({
+  const { register, handleSubmit, formState: { errors }, setValue, watch, setError, clearErrors } = useForm<any>({
     resolver: zodResolver(userSettingsSchema),
     defaultValues: {
       fullName: user?.fullName || '',

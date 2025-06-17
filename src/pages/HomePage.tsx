@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
-import { postsAPI, leaderboardAPI } from '../services/api'
+import { postsAPI } from '../services/api'
 import { Post } from '../types/post'
-import { LeaderboardUser } from '../types/leaderboard'
+// import { LeaderboardUser } from '../types/leaderboard'
 import PostCard from '../components/Post/PostCard'
 import LoadingSpinner from '../components/UI/LoadingSpinner'
 
@@ -16,13 +16,13 @@ const HomePage = () => {
   
   const { ref, inView } = useInView()
 
-  const { data: leaderboardData } = useQuery(
-    ['leaderboard', 'gifts', { period: 'week', limit: 5 }],
-    () => leaderboardAPI.getGiftsLeaderboard({ period: 'week', limit: 5 }),
-    {
-      staleTime: 5 * 60 * 1000, // 5 minutes
-    }
-  )
+  // const { data: leaderboardData } = useQuery(
+  //   ['leaderboard', 'gifts', { period: 'week', limit: 5 }],
+  //   // () => leaderboardAPI.getGiftsLeaderboard({ period: 'week', limit: 5 }),
+  //   {
+  //     staleTime: 5 * 60 * 1000, // 5 minutes
+  //   }
+  // )
 
   const { 
     data: postsData, 
@@ -142,7 +142,7 @@ const HomePage = () => {
               </Link>
             </div>
 
-            {leaderboardData ? (
+            {/* {leaderboardData ? (
               <div className="space-y-4">
                 {leaderboardData.users.map((user: LeaderboardUser) => (
                   <Link key={user._id} to={`/user/${user.username}`} className="flex items-center p-2 hover:bg-gray-50 rounded-lg transition-colors">
@@ -170,7 +170,7 @@ const HomePage = () => {
               <div className="flex justify-center py-8">
                 <LoadingSpinner />
               </div>
-            )}
+            )} */}
           </div>
 
           {/* App Info */}

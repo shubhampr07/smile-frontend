@@ -70,7 +70,7 @@ const PostCard = ({ post, onUpdate, showFullContent = false }: PostCardProps) =>
   return (
     <div
       className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 cursor-pointer"
-      onClick={(e) => {
+      onClick={(_e) => {
         // Don't navigate if gift modal is open
         if (!showGiftModal) {
           navigate(`/post/${post._id}`)

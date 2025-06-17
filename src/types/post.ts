@@ -76,9 +76,11 @@ export interface PostFilters {
   search?: string
   page?: number
   limit?: number
+  sort?: string
 }
 
 export interface PostsResponse {
+  pagination: any
   posts: Post[]
   total: number
   page: number

@@ -95,7 +95,7 @@ const LeaderboardPage = () => {
                   </p>
                 </div>
                 <ul className="divide-y divide-gray-200">
-                  {usersData.users.map((user, index) => (
+                  {usersData.users.map((user: any, index:any) => (
                     <li key={user._id} className="px-4 py-4 sm:px-6 hover:bg-gray-50 transition-colors">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">
@@ -150,7 +150,7 @@ const LeaderboardPage = () => {
                   </p>
                 </div>
                 <ul className="divide-y divide-gray-200">
-                  {postsData.posts.map((post, index) => (
+                  {postsData.posts.map((post:any, index:any) => (
                     <li key={post._id} className="px-4 py-4 sm:px-6 hover:bg-gray-50 transition-colors">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center">

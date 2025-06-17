@@ -41,11 +41,13 @@ export interface LeaderboardPostEntry {
 }
 
 export interface LeaderboardResponse {
+  users: any
   leaderboard: LeaderboardUserEntry[]
   sortBy: string
 }
 
 export interface PostLeaderboardResponse {
+  posts: any
   leaderboard: LeaderboardPostEntry[]
   period: string
 }

@@ -29,7 +29,7 @@ const isMobileDevice = () => {
 }
 
 const GiftModal = ({ post, onClose, onSuccess }: GiftModalProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [_isSubmitting, setIsSubmitting] = useState(false)
   const [transactionId, setTransactionId] = useState('')
   const [isMobile] = useState(isMobileDevice())
 
